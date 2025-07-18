@@ -1,0 +1,11 @@
+<li class="featured-li">
+    <a href="{{ post.url | url }}">
+        <div class="img-box">
+            <img src="{{ post.data.image }}" alt="">
+        </div>
+        <div class="content-text">
+            <p class="title">{{ post.data.title }}</p>
+            <p class="text">{{ post.date | postDate }}</p>
+        </div>
+    </a>
+</li>

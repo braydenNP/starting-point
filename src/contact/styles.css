@@ -1,0 +1,84 @@
+#contact .connect-li {
+    list-style: none;
+    margin-top: var(--fontSize32);
+}
+#contact .connect-li:last-of-type {
+    margin-bottom: var(--fontSize32);
+}
+#contact .connect-li a {
+    text-decoration: none;
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-start;
+}
+.connect-li .icon-box {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bodyTextColor);
+    border-radius: 50%;
+    flex: none;
+}
+.connect-li .icon-box img{
+    filter: brightness(10);
+}
+.connect-li .connect-text {
+    margin: auto 0;
+}
+.connect-li .connect-text .title {
+    margin: 0;
+}
+.connect-li .connect-text .text {
+    font-size: calc();
+}
+.contact-form {
+    padding: clamp(1.5rem, 5.18vw, 3rem) clamp(1rem, 4vw, 3rem);
+    border-radius: 8px;
+    background-color: #F5F5F5;
+}
+.contact-form * {
+    display: block;
+}
+.contact-form .form-label {
+    margin-bottom: 2px;
+}
+.contact-form .form-input {
+    width: 100%;
+    margin-bottom: 1rem;
+    height: 3.5rem;
+    padding-left: 1.5rem;
+    border: none;
+    border-radius: 8px;
+}
+.contact-form .form-input {
+    width: 100%;
+    margin-bottom: 1rem;
+    height: 3.5rem;
+    padding-left: 1.5rem;
+    border: none;
+    border-radius: 8px;
+}
+.contact-form .form-input.message {
+    padding-top: 1.5rem;
+    min-height: 7rem;
+    min-width: 100%;
+    max-width: 100%;
+}
+.button-solid.contact {
+    color: var(--bodyTextColor);
+    margin-top: var(--fontSize96);
+}
+.button-solid.contact:hover {
+    color: var(--bodyTextColorWhite);
+    outline: none;
+}
+@media (min-width: 64rem) {
+    #contact .container {
+        display: flex;
+    }
+    #contact .container .contact-form {
+        flex: 1;
+    }
+}

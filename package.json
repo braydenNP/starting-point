@@ -1,0 +1,25 @@
+{
+  "name": "website-template",
+  "version": "1.0.0",
+  "description": "Brayden's Static Site template",
+  "main": "index.js",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/braydenNP/website-template.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/braydenNP/website-template/issues"
+  },
+  "homepage": "https://github.com/braydenNP/website-template#readme",
+  "dependencies": {
+    "@11ty/eleventy": "^3.1.0",
+    "luxon": "^3.6.1"
+  }
+}

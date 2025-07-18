@@ -1,0 +1,588 @@
+body.scroll #navigation {
+    width: 100%;
+    max-width: 100%;
+    top: 0;
+    border-radius: 0;
+}
+
+body.scroll #navigation:before {
+    border-radius: 0;
+}
+
+body.scroll #navigation .ul-wrapper {
+    top: 50%;
+}
+
+#navigation {
+    width: 94%;
+    box-sizing: border-box;
+    padding: clamp(0.75rem, 2vw, 1.5rem);
+    border-radius: clamp(0.75rem, 2vw, 1.5rem);
+    position: fixed;
+    top: 2rem;
+    left: 50%;
+    z-index: 10000;
+    transform: translateX(-50%);
+    transition: top 0.3s, border-radius 0.3s, width 0.3s, max-width 0.3s;
+}
+
+#navigation:before {
+    /* background color */
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    opacity: 1;
+    /* 12px - 24px */
+    border-radius: clamp(0.75rem, 2vw, 1.5rem);
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: transform 0.2s, border-radius 0.3s ease-in-out;
+}
+
+#navigation.active:before {
+    transform: translateX(-50%) scale(1.03);
+}
+
+#navigation .nav-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+#navigation .logo {
+    width: auto;
+    max-width: 12.5rem;
+    height: 100%;
+    margin: 0 auto 0 0;
+    box-sizing: border-box;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 10;
+}
+
+#navigation .logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+@media only screen and (max-width: 64rem) {
+    #navigation .toggle {
+        width: 3.5rem;
+        height: 3.5rem;
+        margin: 0 0 0 auto;
+        background-color: #1a1a1a;
+        border: none;
+        border-radius: 0.25rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 10;
+        transition: transform 0.6s;
+    }
+}
+
+#navigation .toggle {
+    width: 3.5rem;
+    height: 3.5rem;
+    margin: 0 0 0 auto;
+    background-color: #1a1a1a;
+    border: none;
+    border-radius: 0.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+    transition: transform 0.6s;
+}
+
+#navigation.active .toggle {}
+
+#navigation .nav {
+    order: 3;
+}
+
+#navigation .box {
+    width: clamp(1.5rem, 2vw, 1.75rem);
+    height: 1rem;
+    position: relative;
+}
+
+#navigation .line {
+    width: 100%;
+    height: 2px;
+    background-color: #fafbfc;
+    border-radius: 2px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#navigation .line1 {
+    top: 0;
+    transition: transform 0.5s, top 0.3s, left 0.3s;
+    animation-duration: 0.7s;
+    animation-timing-function: ease;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    transform-origin: center;
+}
+
+#navigation .line2 {
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    transition: top 0.3s, left 0.3s, transform 0.5s;
+    animation-duration: 0.7s;
+    animation-timing-function: ease;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+
+#navigation .line3 {
+    bottom: 0;
+    transition: bottom 0.3s, opacity 0.3s;
+}
+
+#navigation .active .line1 {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(225deg);
+}
+
+#navigation .active .line2 {
+    transform: translate(-50%, -50%) translateY(0) rotate(-225deg);
+}
+
+#navigation .active .line3 {
+    opacity: 0;
+    bottom: 100%;
+}
+
+@media screen and (max-width: 64rem) {
+    #navigation .ul-wrapper {
+        width: 100%;
+        height: auto;
+        padding-bottom: 2.4em;
+        background-color: #fff;
+        border-radius: 0 0 1.5rem 1.5rem;
+        position: absolute;
+        top: 85%;
+        left: 0;
+        z-index: -1;
+        overflow: hidden;
+        transform: scaleY(0);
+        transition: transform 0.4s;
+        transform-origin: top;
+    }
+
+    #navigation.active .ul-wrapper {
+        transform: scaleY(1);
+        transition-delay: 0.15s;
+    }
+}
+
+#navigation .ul {
+    width: 100%;
+    height: auto;
+    max-height: 65vh;
+    margin: 0;
+    padding: 4rem 0 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.25rem;
+    overflow: auto;
+}
+
+#navigation .li {
+    text-align: center;
+    list-style: none;
+    width: 100%;
+    margin-right: 0;
+    opacity: 0;
+    display: block;
+    transform: translateY(-70/16rem);
+    transition: transform 0.6s, opacity 0.9s;
+}
+
+#navigation.active .li {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#navigation .li:nth-of-type(1) {
+    transition-delay: 0.05s;
+}
+
+#navigation .li:nth-of-type(2) {
+    transition-delay: 0.1s;
+}
+
+#navigation .li:nth-of-type(3) {
+    transition-delay: 0.15s;
+}
+
+#navigation .li:nth-of-type(4) {
+    transition-delay: 0.2s;
+}
+
+#navigation .li:nth-of-type(5) {
+    transition-delay: 0.25s;
+}
+
+#navigation .li:nth-of-type(6) {
+    transition-delay: 0.3s;
+}
+
+#navigation .li-link {
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    line-height: 1.2em;
+    text-decoration: none;
+    margin: 0;
+    color: var(--headerColor);
+    display: inline-block;
+    position: relative;
+}
+
+#navigation .li-link.active {
+    color: var(--primary)
+}
+
+#navigation .li-link:hover {
+    color: var(--primary)
+}
+
+#navigation .button-solid {
+    display: none;
+}
+
+/* its the end of.. the first section */
+
+#navigation .dropdown {
+    color: var(--bodyTextColorWhite);
+    position: relative;
+}
+
+#navigation .dropdown .li-link {
+    position: relative;
+    transition: opacity 0.3s color 0.3s;
+}
+
+#navigation .drop-icon {
+    width: 0.9375rem;
+    height: auto;
+}
+
+#navigation .drop-ul {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+}
+
+/* mobile only styles */
+@media (max-width: 64rem) {
+    #navigation .drop-icon {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: -1.25rem;
+    }
+
+    #navigation .drop-ul {
+        width: 100%;
+        height: 0;
+        background-color: var(--primary);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+        transition: padding 0.3s, margin 0.3s, height 0.3s, opacity 0.3s, visibility 0.3s;
+    }
+
+    #navigation .dropdown.active .drop-ul {
+        height: auto;
+        margin: 0.75rem 0 0 0;
+        padding: 0.75rem 0;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    #navigation .li-link.drop-link {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 2vw, 1.25rem);
+        color: #fff;
+    }
+
+    #navigation .dropdown.active .drop-link {
+        opacity: 1;
+    }
+
+}
+
+#navigation .drop-li {
+    list-style: none;
+}
+
+
+/* its the end of.. the mobile navbar. good job. */
+/* its really the end? I can't believe it! */
+
+@media only screen and (min-width: 64.001rem) {
+    #navigation .nav {
+        order: 3;
+    }
+
+    #navigation .dropdown {
+        color: inherit;
+    }
+
+    #navigation .dropdown:hover {
+        cursor: pointer;
+    }
+
+    #navigation .dropdown:hover .drop-ul {
+        opacity: 1;
+        visibility: visible;
+        transform: scaleY(1);
+    }
+
+    #navigation .drop-li {
+        font-size: 1rem;
+        text-decoration: none;
+        list-style: none;
+        width: 100%;
+        height: auto;
+        opacity: 0;
+        display: block;
+        transform: translateY(-0.625rem);
+        transition: opacity 0.6s, transform 0.6s;
+    }
+
+    #navigation .dropdown:hover .drop-li {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    #navigation .drop-li:nth-of-type(1) {
+        transition-delay: 0.05s;
+    }
+
+    #navigation .drop-li:nth-of-type(2) {
+        transition-delay: 0.1s;
+    }
+
+    #navigation .drop-li:nth-of-type(3) {
+        transition-delay: 0.15s;
+    }
+
+    #navigation .drop-li:nth-of-type(4) {
+        transition-delay: 0.2s;
+    }
+
+    #navigation .drop-li:nth-of-type(5) {
+        transition-delay: 0.25s;
+    }
+
+    #navigation .drop-li:nth-of-type(6) {
+        transition-delay: 0.3s;
+    }
+
+    #navigation .drop-li:nth-of-type(7) {
+        transition-delay: 0.35s;
+    }
+
+    #navigation .drop-li:nth-of-type(8) {
+        transition-delay: 0.4s;
+    }
+
+    #navigation .drop-li:nth-of-type(9) {
+        transition-delay: 0.45s;
+    }
+
+    #navigation .drop-icon {
+        display: inline-block;
+    }
+
+    #navigation .drop-ul {
+        min-width: 12.5rem;
+        background-color: #fff;
+        box-shadow: inset rgba(149, 157, 165, 0.1) 0px 8px 10px;
+        border-bottom: 5px solid var(--primary);
+        border-radius: 0 0 1.5rem 1.5rem;
+        /* if you have 8 or more links in your dropdown nav, uncomment the columns property to make the list into 2 even columns. Change it to 3 or 4 if you need extra columns. Then remove the transition delays on the drop-li so they don't have weird scattered animations */
+        position: absolute;
+        top: 100%;
+        z-index: -100;
+        transform: scaleY(0);
+        transition: transform 0.3s, visibility 0.3s, opacity 0.3s;
+        transform-origin: top;
+    }
+
+    #navigation .li-link.drop-link {
+        font-size: 1rem;
+        line-height: 1.5em;
+        text-align: left;
+        text-transform: capitalize;
+        text-decoration: none;
+        white-space: nowrap;
+        width: 100%;
+        /* prevents padding from affecting height and width */
+        box-sizing: border-box;
+        padding: 0.75rem;
+        color: var(--headerColor);
+        display: block;
+        transition: color 0.3s, background-color 0.3s;
+    }
+
+    #navigation .li-link.drop-link:hover {
+        /* color: var(--bodyTextColorWhite); */
+        background-color: #FDFDFD;
+        /* background-color: var(--primary) */
+    }
+
+    #navigation .li-link.drop-link:before {
+        display: none;
+    }
+
+    #navigation {
+        max-width: 90rem;
+        height: 6rem;
+        background-color: #fff;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        display: flex;
+        align-items: center;
+    }
+
+    #navigation {
+        width: 94%;
+        max-width: 90rem;
+        height: 6rem;
+        /* prevents padding from affecting height and width */
+        box-sizing: border-box;
+        /* 12px - 24px */
+        padding: clamp(0.75rem, 2vw, 1.5rem) 0;
+        background-color: #fff;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        /* 12px - 24px */
+        border-radius: clamp(0.75rem, 2vw, 1.5rem);
+        display: flex;
+        align-items: center;
+        position: fixed;
+        top: 2rem;
+        left: 50%;
+        z-index: 10000;
+        transform: translateX(-50%);
+        transition: top 0.3s, border-radius 0.3s, width 0.3s, max-width 0.3s;
+    }
+
+    #navigation .nav-container {
+        max-width: 90rem;
+        margin: auto;
+        box-sizing: border-box;
+        padding: 0 1.5rem;
+        justify-content: space-between;
+    }
+
+    #navigation .toggle {
+        display: none;
+    }
+
+    #navigation .logo {
+        width: 18.4%;
+        max-width: 21.875rem;
+        height: 2rem;
+    }
+
+    #navigation .logo img {
+        width: auto;
+    }
+
+    #navigation .ul-wrapper {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        /* absolutely positioned to be dead center */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #navigation .ul {
+        height: 100%;
+        max-height: none;
+        padding: 0;
+        gap: clamp(1.25rem, 2.6vw, 2.25rem);
+        overflow: visible;
+        flex-direction: row;
+    }
+
+    #navigation .li {
+        height: 100%;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        /* prevent flexbox from squishing it */
+        flex: none;
+        transform: none;
+        transition: none;
+        width: auto;
+        opacity: 1;
+    }
+
+    #navigation .li-link {
+        font-family: 'DM Serif Display';
+        font-size: 1rem;
+        line-height: 1.5em;
+        display: block;
+        transition: color 0.3s;
+    }
+
+    #navigation .li-link .li-link{
+        display: inline-block;
+    }
+
+    #navigation .li-link:hover {
+        color: var(--primary);
+    }
+
+    #navigation .button-solid {
+        display: inline-block;
+        font-size: 0.8rem;
+        font-weight: 400;
+        /* 46px - 56px */
+        line-height: clamp(2.875em, 5.5vw, 3.5em);
+        text-align: center;
+        text-decoration: none;
+        min-width: 9.375rem;
+        margin: 0;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+        padding: 0 2rem;
+        color: var(--primary);
+        background-color: #fff;
+        border: 2px solid var(--primary);
+        border-radius: 4px;
+        position: relative;
+        z-index: 1;
+        transition: color 0.3s, background-color 0.3s, border-color 0.3s;
+    }
+    #navigation .button-solid:hover {
+        background-color: var(--bodyTextColor);
+        color: var(--bodyTextColorWhite);
+        border-color: var(--bodyTextColor);
+    }
+}

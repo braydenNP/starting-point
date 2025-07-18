@@ -1,0 +1,22 @@
+---
+layout: base.njk
+title: "Home"
+---
+<section id="hero">
+    <div class="container">
+        <h1 class="title xl">Title</h1>
+        <p class="text sm">subtitle</p>
+        <a href="" class="button-solid">Get Started</a>
+    </div>
+</section>
+<section id="blog">
+    <div class="container">
+        <h1 class="title">Latest on my Blog</h1>
+        <ul class="blog-ul">
+            {%- for post in collections.featured | reverse -%}
+                {% include "featured-post.njk" %}
+            {%- endfor -%}
+        </ul>
+        <a href="/blog" class="button-solid">View More Articles <span class="arrow">→</span></a>
+    </div>
+</section>

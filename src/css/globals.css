@@ -1,0 +1,263 @@
+/*-- -------------------------- -->
+<---        Core Styles         -->
+<--- -------------------------- -*/
+/* Mobile */
+@media only screen and (min-width: 0rem) {
+    :root {
+        --primary: #6BA292;
+        --primaryLight: #001F3F;
+        --secondary: #FF8260;
+        --secondaryLight: #FFBA43;
+        --headerColor: #1B1B1B;
+        --bodyTextColor: #4A4A47;
+        --bodyTextColorWhite: #FAFAFB;
+        /* 13px - 16px */
+        --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+        /* 31px - 49px */
+        --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+        --fontSize96: clamp(2.5rem, 8vw, 6rem);       /* ~40px to 96px */
+        --fontSize64: clamp(2rem, 6vw, 4rem);         /* ~32px to 64px */
+        --fontSize48: clamp(1.75rem, 5vw, 3rem);      /* ~28px to 48px */
+        --fontSize36: clamp(1.5rem, 4vw, 2.25rem);    /* ~24px to 36px */
+        --fontSize32: clamp(1.25rem, 3.5vw, 2rem);    /* ~20px to 32px */
+        --bodyFontSize: clamp(1rem, 3vw, 1.5rem);     /* ~16px to 24px */
+        --paraFontSize: clamp(0.667rem, 2vw, 1rem);     /* ~12px to 16px */
+        /* 60px - 100px top and bottom */
+        --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+    }
+
+    @font-face {
+        font-family: 'Inter';
+        src: url('/fonts/Inter-VariableFont_opsz,wght.ttf') format('truetype');
+        font-weight: 400 600; /* Enable the full weight range */
+        font-style: normal;
+    }
+
+
+    @font-face {
+        font-family: 'DM Serif Display';
+        src: url('/fonts/DMSerifDisplay-Regular.ttf') format('truetype');
+        font-weight: 400; /* Enable the full weight range */
+        font-style: normal;
+    }
+
+    body,
+    html {
+        margin: 0;
+        padding: 0;
+        font-size: 100%;
+        font-family: 'Inter', Arial, sans-serif;
+        color: var(--bodyTextColor);
+        overflow-x: hidden;
+    }
+
+    *,
+    *:before,
+    *:after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        transition: background-color 0.3s;
+    }
+
+    section,
+    footer {
+        padding: var(--sectionPadding);
+    }
+
+    .container {
+        position: relative;
+        width: 98%;
+        max-width: 75rem;
+        margin-inline: auto;
+        /* padding-inline: 1rem; */
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin: 0;
+        color: var(--headerColor);
+        font-weight: 400;
+    }
+
+    .xl {
+        font-size: var(--fontSize96);
+    }
+    .l {
+        font-size: var(--fontSize64);
+    }
+    .m {
+        font-size: var(--fontSize48);
+    }
+    .sm {
+        font-size: var(--fontSize36);
+    }
+    .s {
+        font-size: var(--fontSize32);
+    }
+    .xs {
+        font-size: var(--bodyFontSize);
+    }
+    .xxs {
+        font-size: var(--paraFontSize);
+    }
+
+    p,
+    li,
+    a {
+        font-size: 1rem;
+        line-height: 1.5em;
+        margin: 0;
+    }
+
+    p,
+    li {
+        color: var(--bodyTextColor);
+    }
+
+    a:hover,
+    button:hover {
+        cursor: pointer;
+    }
+
+    img {
+        display: block;
+        max-width: 100%;
+    }
+    .img-decor {
+        display: inline-block;
+        position: relative;
+    }
+    .img-decor::before{
+        content: "";
+        position: absolute;
+        width: 50%;
+        aspect-ratio: 1/1;
+        background-color: var(--secondary);
+        bottom: -10px;
+        right: -10px;
+        z-index: -1;
+    }
+    .img-decor.left::before {
+        left: -10px;
+    }
+
+    .topper {
+        font-size: var(--topperFontSize);
+        line-height: 1.2em;
+        text-transform: uppercase;
+        text-align: inherit;
+        letter-spacing: .1em;
+        font-weight: 700;
+        color: var(--primary);
+        margin-bottom: 0.25rem;
+        display: block;
+    }
+
+    .title {
+        font-family: 'DM Serif Display';
+        line-height: 1.2em;
+        text-align: inherit;
+        /* max-width: 43.75rem; */
+        margin: 0;
+        color: var(--headerColor);
+        position: relative;
+    }
+    
+    .title::before {
+        display: block;
+        width: 100%;
+        bottom: 100%;
+        font-size: var(--fontSize48);
+        color: var(--bodyTextColor);
+    }
+
+    .text {
+        font-family: 'Inter';
+        font-weight: 400;
+        line-height: 1.5em;
+        text-align: inherit;
+        width: 100%;
+        max-width: 40.625rem;
+        margin: 0;
+        color: var(--bodyTextColor);
+    }
+    .mb {
+        margin-bottom: 1em;
+    }
+
+    .text.semibold {
+        font-weight: 500;
+    }
+    .text.bold {
+        font-weight: 700;
+    }
+    .text.light {
+        font-weight: 300;
+    }
+
+    .button-solid {
+        font-family: 'Inter';
+        font-size: 1rem;
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-decoration: none;
+        font-weight: 400;
+        text-align: center;
+        margin: 0;
+        color: var(--headerColor);
+        background-color: var(--bodyTextColorWhite);
+        min-width: 9.375rem;
+        padding: 0 1.5rem;
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+        border-radius: 4px;
+        border: 2px solid var(--bodyTextColor);
+        width: fit-content;
+        transition: color 0.3s, background-color 0.3s, outline 0.3s;
+    }
+
+    .button-solid:hover {
+        color: var(--bodyTextColorWhite);
+        background-color: var(--bodyTextColor);
+    }
+
+    .arrow {
+        display: inline-block;
+        transition: transform 0.3s ease;
+    }
+
+    a:hover .arrow {
+        transform: translateX(5px); /* Adjust distance as needed */
+    }
+
+    .skip {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        z-index: -1111111;
+    }
+
+    #nav-banner {
+        background-image: url(/images/pagenav_bg.png);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: calc(clamp(4rem, 8vw, 6.75rem) + 4.25rem) 1rem calc(clamp(2rem, 4vw, 3.25rem));
+        text-align: center;
+    }
+    #nav-banner .title{
+        color: var(--bodyTextColorWhite);
+    }
+}

@@ -1,0 +1,22 @@
+---
+layout: pagenav.njk
+title: "Blog"
+pagename: "Blog"
+---
+<section id="blog">
+    <div class="container">
+        <ul class="blog-ul">
+            {%- for post in collections.post | reverse -%}
+                {% include "blog-preview.njk" %}
+            {%- endfor -%}
+        </ul>
+        <div class="featured">
+            <h2 class="title sm">Featured Posts</h2>
+            <ul class="featured-ul">
+                {%- for post in collections.featured | reverse -%}
+                    {% include "blogpage-featured.njk" %}
+                {%- endfor -%}
+            </ul>
+        </div>
+    </div>
+</section>

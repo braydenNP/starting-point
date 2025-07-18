@@ -1,0 +1,12 @@
+<li class="blog-li">
+    <a href="{{ post.url | url }}">
+        <div class="blog-image">
+            <img src="{{ post.data.image }}" alt="Blog post image">
+        </div>
+        <div class="text-contents">
+            <p class="text xs">{{ post.date | postDate }}</p>
+            <h3 class="title sm">{{ post.data.title }}</h3>
+            <p class="text xs">{{ post.data.teaser }}</p>
+        </div>
+    </a>
+</li>
