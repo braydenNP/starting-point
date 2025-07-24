@@ -20,19 +20,19 @@
             <div class="ul-wrapper">
                 <ul id="expanded" class="ul" aria-expanded="false">
                     <li class="li">
-                        <a href="/" class="li-link active">
+                        <a href="/" class="li-link {% if page.url == '/' %}active{% endif %}">
                             Home
                         </a>
                     </li>
                     <li class="li">
-                        <a href="/about" class="li-link">
+                        <a href="/about" class="li-link {% if page.url == '/about/' %}active{% endif %}">
                             About
                         </a>
                     </li>
                     <!--Copy and paste this dropdown list item and replace any .li with this dropdown group to make a new dropdown and it will work-->
                     <li class="li dropdown" tabindex="0">
                         <span class="li-link">
-                            <a href="/services" class="li-link">
+                            <a href="/services" class="li-link {% if page.url == '/services/' %}active{% endif %}">
                                 Services
                             </a>
                             <img class="drop-icon"
@@ -41,20 +41,20 @@
                         </span>
                         <ul class="drop-ul">
                             <li class="drop-li">
-                                <a href="/coaching" class="li-link drop-link">Coaching</a>
+                                <a href="/coaching" class="li-link drop-link {% if page.url == '/services/coaching/' %}active{% endif %}">Coaching</a>
                             </li>
                             <li class="drop-li">
-                                <a href="/balance-blueprint" class="li-link drop-link">Balance Blueprint</a>
+                                <a href="/balance-blueprint" class="li-link drop-link {% if page.url == '/services/balance-blueprint/' %}active{% endif %}">Balance Blueprint</a>
                             </li>
                         </ul>
                     </li>
                     <li class="li">
-                        <a href="/blog" class="li-link">
+                        <a href="/blog" class="li-link {% if page.url == '/blog/' %}active{% endif %}">
                             Blog
                         </a>
                     </li>
                     <li class="li">
-                        <a href="/contact" class="li-link">
+                        <a href="/contact" class="li-link {% if page.url == '/contact/' %}active{% endif %}">
                             Contact
                         </a>
                     </li>
