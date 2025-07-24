@@ -46,9 +46,6 @@
     }
 
     #footer .text {
-        /* 14px - 16px */
-        font-size: clamp(0.875rem, 2.5vw, 1rem);
-        line-height: 1.5em;
         margin: 0;
         margin-bottom: 2rem;
         /* changes to 305px at desktop */

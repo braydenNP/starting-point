@@ -561,28 +561,5 @@ body.scroll #navigation .ul-wrapper {
 
     #navigation .button-solid {
         display: inline-block;
-        font-size: 0.8rem;
-        font-weight: 400;
-        /* 46px - 56px */
-        line-height: clamp(2.875em, 5.5vw, 3.5em);
-        text-align: center;
-        text-decoration: none;
-        min-width: 9.375rem;
-        margin: 0;
-        /* prevents padding from adding to the width */
-        box-sizing: border-box;
-        padding: 0 2rem;
-        color: var(--primary);
-        background-color: #fff;
-        border: 2px solid var(--primary);
-        border-radius: 4px;
-        position: relative;
-        z-index: 1;
-        transition: color 0.3s, background-color 0.3s, border-color 0.3s;
-    }
-    #navigation .button-solid:hover {
-        background-color: var(--bodyTextColor);
-        color: var(--bodyTextColorWhite);
-        border-color: var(--bodyTextColor);
     }
 }
