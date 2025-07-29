@@ -20,6 +20,7 @@
   "homepage": "https://github.com/braydenNP/website-template#readme",
   "dependencies": {
     "@11ty/eleventy": "^3.1.0",
+    "@codestitchofficial/eleventy-plugin-sharp-images": "^2.1.1",
     "luxon": "^3.6.1"
   }
 }

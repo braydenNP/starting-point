@@ -1,7 +1,7 @@
 <li class="blog-li">
     <a href="{{ post.url | url }}">
         <div class="blog-image">
-            <img src="{{ post.data.image }}" alt="Blog post image">
+            <img src="{{ post.data.image }}" alt="Blog post image" decoding="async">
         </div>
         <div class="text-contents">
             <p class="text xs">{{ post.date | postDate }}</p>

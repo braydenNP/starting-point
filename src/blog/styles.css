@@ -60,3 +60,65 @@
         gap: var(--fontSize32);
     }
 }
+#content {
+    margin: 2rem auto;
+    color: #333;
+    background: #fff;
+}
+
+#content h1,
+#content h2,
+#content h3,
+#content h4,
+#content h5,
+#content h6 {
+    font-family: var(--headerFontFamily);
+    color: var(--primary);
+}
+
+#content h1 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+}
+
+#content h2 {
+    font-size: 2rem;
+    margin-top: 2rem;
+    margin-bottom: .5rem;
+    border-bottom: 2px solid var(--primary);
+    padding-bottom: 0.25rem;
+}
+
+#content h3 {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+#content p {
+    font-size: 1rem;
+    margin-bottom: .5rem;
+    color: var(--bodyTextColor);
+}
+
+#content ul {
+    list-style: disc inside;
+    margin-bottom: var(--spacing);
+    padding-left: 1.25rem;
+    color: var(--bodyTextColor);
+}
+
+#content ol {
+    list-style-position: inside;
+    margin-bottom: var(--spacing);
+    padding-left: 1.25rem;
+    color: var(--bodyTextColor);
+}
+
+#content ul li {
+    margin-bottom: 0.5rem;
+}
+
+#content ol li {
+    margin-bottom: 0.5rem;
+}

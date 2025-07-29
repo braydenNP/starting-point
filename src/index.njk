@@ -1,13 +1,42 @@
 ---
 layout: base.njk
 title: "Home"
+description: "Find out who we are, our services, our pricing"
 ---
+{% block head %}
+    <link rel="preload" as="image" href="{% getUrl '/images/header.jpg' | resize({ height: 1490, width: 640 }) | modulate({ brightness: 0.6 }) |  avif({ quality: 75 }) %}" />
+{% endblock %}
 <section id="hero">
     <div class="container">
-        <h1 class="title xl">Title</h1>
-        <p class="text sm">subtitle</p>
+        <h1 class="title xl white">Title</h1>
+        <p class="text sm white">subtitle</p>
         <a href="" class="button-solid">Get Started</a>
     </div>
+    <picture class="background-image">
+        <source srcset="{% getUrl '/images/header.jpg' | resize({ height: 1490, width: 640 }) | modulate({ brightness: 0.6 }) |  avif({ quality: 75 }) %}"
+            media="(max-width: 600px)" type="image/avif" decoding="async">
+        <source srcset="{% getUrl '/images/header.jpg' | resize({ height: 1490, width: 640 }) | modulate({ brightness: 0.6 }) |  webp({ quality: 75 }) %}"
+            media="(max-width: 600px)" type="image/webp" decoding="async">
+        <source srcset="{% getUrl '/images/header.jpg' | resize({ height: 1490, width: 640 }) | modulate({ brightness: 0.6 }) |  jpeg({ quality: 75 }) %}"
+            media="(max-width: 600px)" type="image/jpeg" decoding="async">
+    
+        <source srcset="{% getUrl '/images/header.jpg' | resize({ height: 1922, width: 2048 }) | modulate({ brightness: 0.6 }) |  avif({ quality: 75 }) %}"
+            media="(max-width: 1024px)" type="image/avif" decoding="async">
+        <source srcset="{% getUrl '/images/header.jpg' | resize({ height: 1922, width: 2048 }) | modulate({ brightness: 0.6 }) |  webp({ quality: 75 }) %}"
+            media="(max-width: 1024px)" type="image/webp" decoding="async">
+        <source srcset="{% getUrl '/images/header.jpg' | resize({ height: 1922, width: 2048 }) | modulate({ brightness: 0.6 }) |  jpeg({ quality: 75 }) %}"
+            media="(max-width: 1024px)" type="image/jpeg" decoding="async">
+    
+        <source srcset="{% getUrl '/images/header.jpg' | resize({ height: 1980, width: 2560 }) | modulate({ brightness: 0.6 }) |  avif({ quality: 75 }) %}"
+            media="(min-width: 1024px)" type="image/avif" decoding="async">
+        <source srcset="{% getUrl '/images/header.jpg' | resize({ height: 1980, width: 2560 }) | modulate({ brightness: 0.6 }) |  webp({ quality: 75 }) %}"
+            media="(min-width: 1024px)" type="image/webp" decoding="async">
+        <source srcset="{% getUrl '/images/header.jpg' | resize({ height: 1980, width: 2560 }) | modulate({ brightness: 0.6 }) |  jpeg({ quality: 75 }) %}"
+            media="(min-width: 1024px)" type="image/jpeg" decoding="async">
+    
+        <img src="{% getUrl '/images/header.jpg' | resize({ height: 1980, width: 2560 }) | modulate({ brightness: 0.6 }) |  jpeg({ quality: 75 }) %}"
+            alt="landing page background image" decoding="async">
+    </picture>
 </section>
 <section id="blog">
     <div class="container">
@@ -17,6 +46,6 @@ title: "Home"
                 {% include "featured-post.njk" %}
             {%- endfor -%}
         </ul>
-        <a href="/blog" class="button-solid">View More Articles <span class="arrow">→</span></a>
+        <a href="/blog" class="button-solid secondary">View More Articles <span class="arrow">→</span></a>
     </div>
 </section>

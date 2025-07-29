@@ -3,6 +3,7 @@ title: "The Art of Gentle Discipline in Nutrition"
 image: "/images/the-art-of-gentle-discipline.png"
 tags: ["post", "featured"]
 teaser: "Expert advice on why we should not be so harsh on ourselves regarding nutrition"
+date: 2027-04-05
 ---
 Nutrition advice often leans toward extremes—elimination diets, strict counting, or rigid meal plans. While structure can support health, an overly harsh or perfectionistic approach to eating frequently leads to guilt, burnout, and cycles of restriction and overindulgence.
 

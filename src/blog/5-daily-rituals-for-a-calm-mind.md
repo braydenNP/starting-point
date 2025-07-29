@@ -3,6 +3,7 @@ title: "5 Daily Rituals for a Calm Mind"
 image: "/images/five-daily-rituals.png"
 tags: ["post", "featured"]
 teaser: "Expert advice about how to remain calm in our busy day to day schedules"
+date: 2027-03-05
 ---
 In today’s hyper-connected, fast-paced world, achieving mental calmness is increasingly challenging. Demands on attention, time, and energy can lead to a constant state of mental clutter, anxiety, and fatigue. However, mental calmness is not an abstract ideal—it can be cultivated through consistent daily practices.
 

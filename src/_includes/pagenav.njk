@@ -2,6 +2,31 @@
 layout: base.njk
 ---
 <div id="nav-banner">
-    <soan class="title l">{{ pagename }}</span>
+    <span class="title l">{{ pagename }}</span>
+    <picture class="background-image">
+        <source srcset="{% getUrl '/images/pagenav_bg.png' | resize({ height: 400, width: 800 }) | avif({ quality: 75 }) %}"
+            media="(max-width: 600px)" type="image/avif" decoding="async">
+        <source srcset="{% getUrl '/images/pagenav_bg.png' | resize({ height: 400, width: 800 }) | webp ({ quality: 75 }) %}"
+            media="(max-width: 600px)" type="image/webp" decoding="async">
+        <source srcset="{% getUrl '/images/pagenav_bg.png' | resize({ height: 400, width: 800 }) | jpeg({ quality: 75 }) %}"
+            media="(max-width: 600px)" type="image/jpeg" decoding="async">
+    
+        <source srcset="{% getUrl '/images/pagenav_bg.png' | resize({ height: 400, width: 1500 }) | avif({ quality: 75 }) %}"
+            media="(max-width: 1024px)" type="image/avif" decoding="async">
+        <source srcset="{% getUrl '/images/pagenav_bg.png' | resize({ height: 400, width: 1500 }) | webp ({ quality: 75 }) %}"
+            media="(max-width: 1024px)" type="image/webp" decoding="async">
+        <source srcset="{% getUrl '/images/pagenav_bg.png' | resize({ height: 400, width: 1500 }) | jpeg({ quality: 75 }) %}"
+            media="(max-width: 1024px)" type="image/jpeg" decoding="async">
+    
+        <source srcset="{% getUrl '/images/pagenav_bg.png' | resize({ height: 400, width: 2000 }) | avif({ quality: 75 }) %}"
+            media="(min-width: 1024px)" type="image/avif" decoding="async">
+        <source srcset="{% getUrl '/images/pagenav_bg.png' | resize({ height: 400, width: 2000 }) | webp ({ quality: 75 }) %}"
+            media="(min-width: 1024px)" type="image/webp" decoding="async">
+        <source srcset="{% getUrl '/images/pagenav_bg.png' | resize({ height: 400, width: 2000 }) | jpeg({ quality: 75 }) %}"
+            media="(min-width: 1024px)" type="image/jpeg" decoding="async">
+    
+        <img src="{% getUrl '/images/pagenav_bg.png' | resize({ height: 400, width: 2000 }) | jpeg({ quality: 75 }) %}"
+            alt="landing page background image" decoding="async">
+    </picture>
 </div>
 {{ content | safe }}

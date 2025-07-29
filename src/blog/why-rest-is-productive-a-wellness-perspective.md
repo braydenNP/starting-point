@@ -3,6 +3,7 @@ title: "Why Rest is Productive: A Wellness Perspective"
 image: "/images/why-rest-is-productive.png"
 tags: ["post", "featured"]
 teaser: "Expert opinion on why rest is better than always working"
+date: 2027-03-03
 ---
 In a culture that often equates productivity with constant activity, rest can be misinterpreted as laziness or lost time. However, research from neuroscience, psychology, and performance science reveals a different story: rest is not the opposite of productivity—it is a critical component of it.
 

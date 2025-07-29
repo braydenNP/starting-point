@@ -1,13 +1,8 @@
 #hero {
     position: relative;
-    background-image: url(/images/hero_bg.webp);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     padding: calc(132px + clamp(3rem, 10vh, 7rem)) 1rem clamp(4rem, 12vh, 8rem);
     z-index: 0;
     /* ensure it's behind any absolutely positioned children */
-    padding-bottom: 0;
 }
 
 #hero::before {
@@ -37,10 +32,6 @@
 /* Blog */
 #blog {
     background-color: var(--primary);
-}
-
-#blog * {
-    color: var(--bodyTextColorWhite);
 }
 
 #blog h1.title::before {

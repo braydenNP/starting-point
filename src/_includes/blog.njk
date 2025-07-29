@@ -1,8 +1,33 @@
 ---
 layout: pagenav.njk
 ---
-<section id="blogpage">
+<link rel="stylesheet" href="../styles.css">
+<section id="blog">
     <div class="container">
-        {{ content | safe }}
+        <ul class="blog-ul">
+            <li class="blog-li">
+                <a href="{{ url | url }}">
+                    <div class="blog-image">
+                        <img src="{{ image }}" alt="Blog post image" decoding="async">
+                    </div>
+                    <div class="text-contents">
+                        <p class="text xs">{{ date | postDate }}</p>
+                        <h3 class="title sm">{{ title }}</h3>
+                        <p class="text xs">{{ teaser }}</p>
+                    </div>
+                </a>
+            </li>
+            <li id="content">
+                {{ content | safe }}
+            </li>
+        </ul>
+        <div class="featured">
+            <h2 class="title sm">Featured Posts</h2>
+            <ul class="featured-ul">
+                {%- for post in collections.featured | reverse -%}
+                {% include "blogpage-featured.njk" %}
+                {%- endfor -%}
+            </ul>
+        </div>
     </div>
 </section>

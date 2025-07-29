@@ -1,4 +1,6 @@
 const { DateTime } = require("luxon");
+const eleventyPluginSharpImages = require("@codestitchofficial/eleventy-plugin-sharp-images");
+
 module.exports = async function(eleventyConfig) {
 	// Configure Eleventy
     eleventyConfig.addPassthroughCopy("./src/css/");
@@ -12,6 +14,10 @@ module.exports = async function(eleventyConfig) {
     eleventyConfig.addFilter("postDate", (dateObj) => {
         return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED);
     }) 
+    eleventyConfig.addPlugin(eleventyPluginSharpImages, {
+        urlPath: "/images",
+        outputDir: "public/images",
+    });
     return {
         dir: {
             input: "src",
