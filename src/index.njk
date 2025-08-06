@@ -40,12 +40,12 @@ description: "Find out who we are, our services, our pricing"
 </section>
 <section id="blog">
     <div class="container">
-        <h1 class="title">Latest on my Blog</h1>
+        <h1 class="title xl white">Latest on my Blog</h1>
         <ul class="blog-ul">
             {%- for post in collections.featured | reverse -%}
                 {% include "featured-post.njk" %}
             {%- endfor -%}
         </ul>
-        <a href="/blog" class="button-solid secondary">View More Articles <span class="arrow">→</span></a>
+        <a href="/blog" class="button-solid white">View More Articles <span class="arrow">→</span></a>
     </div>
 </section>

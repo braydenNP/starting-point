@@ -176,14 +176,15 @@
         height: 0.8125rem;
         width: auto;
         display: block;
-    }
-    #footer .copyright #copyright-text{
-        max-width: 50rem;
-    }
+    }        
     #footer .copyright{
         border-top: 1px solid var(--bodyTextColorWhite);
         margin-top: clamp(1.75rem, 4.17vw, 2.75rem);
         padding-top: calc(clamp(1.75rem, 4.17vw, 2.75rem)*0.3);
+    }
+    #footer .copyright a {
+        text-decoration: none;
+        color: var(--secondary);
     }
 }
 
@@ -206,7 +207,7 @@
         margin: 0;
     }
     #footer .copyright .text {
-        max-width: 40.0625rem;
+        max-width: none;
     }
 
     #footer .nav,

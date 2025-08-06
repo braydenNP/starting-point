@@ -262,6 +262,20 @@
         background-color: var(--bodyTextColorWhite);
     }
 
+    .button-solid.white {
+        color: var(--primaryDark);
+        background-color: var(--bodyTextColorWhite);
+    }
+
+    .button-solid.white::before {
+        background: var(--bodyTextColorWhite);
+    }
+
+    .button-solid.white:hover {
+        color: var(--primaryDark);
+        background-color: var(--bodyTextColorWhite);
+    }
+
     .sr-only {
         position: absolute;
         width: 1px;

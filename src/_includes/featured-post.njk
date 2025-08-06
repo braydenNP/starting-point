@@ -1,7 +1,7 @@
 <li class="blog-li">
   <img src="{{ post.data.image }}" alt="" class="blog-img" decoding="async" loading="lazy">
-  <p class="text date xs">{{ post.date | postDate }}</p>
-  <h3 class="title sm">{{ post.data.title }}</h3>
-  <p class="text teaser xs">{{ post.data.teaser }}</p>
-  <a class="blog-btn" href="{{ post.url | url }}">Read More <span class="arrow">→</span></a>
+  <p class="text date xs white">{{ post.date | postDate }}</p>
+  <h3 class="title sm white">{{ post.data.title }}</h3>
+  <p class="text teaser xs white">{{ post.data.teaser }}</p>
+  <a class="blog-btn" href="{{ post.url | url }}">Read More</a>
 </li>

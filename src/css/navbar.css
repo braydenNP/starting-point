@@ -544,7 +544,7 @@ body.scroll #navigation .ul-wrapper {
     }
 
     #navigation .li-link {
-        font-family: 'DM Serif Display';
+        font-family: var(--headerFontFamily);
         font-size: 1rem;
         line-height: 1.5em;
         display: block;
