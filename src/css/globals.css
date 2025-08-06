@@ -160,10 +160,6 @@
         color: var(--bodyTextColor);
         line-height: 0.75em;
     }
-    
-    .subtitle.white {
-        color: var(--bodyTextColorWhite)
-    }
 
     .text {
         font-family: var(--bodyFontFamily);
@@ -176,8 +172,22 @@
         color: var(--bodyTextColor);
     }
 
-    .text.white {
-        color: var(--bodyTextColorWhite)
+    .text.white,
+    .subtitle.white {
+        color: var(--bodyTextColorWhite);
+    }
+
+    section.dark-section {
+        background-color: var(--bodyTextColor);
+    }
+
+    section.dark-section .text,
+    section.dark-section .subtitle {
+        color: var(--bodyTextColorWhite);
+    }
+    
+    section.dark-section .title {
+        color: var(--headerColorWhite);
     }
 
     .center {
