@@ -37,10 +37,10 @@
                 <span class="header">Contact</span>
             </li>
             <li class="contact-li">
-                <a class="contact-link" href="tel: 9123-4567"><img src="/images/phone.svg" height="20" width="20" alt="" decoding="async" loading="lazy">(+65) 9123-4567</a>
+                <a class="contact-link" href="tel:{{ client.phoneForTel }}"><img src="/images/phone.svg" height="20" width="20" alt="" decoding="async" loading="lazy">{{ client.phoneFormatted }}</a>
             </li>
             <li class="contact-li">
-                <a class="contact-link" href="mailto:hwwdinfo@gmail.com"><img src="/images/envelope.svg" height="20" width="20" alt="" viewBox="0 0 20 20" decoding="async" loading="lazy">hwwdinfo@gmail.com</a>
+                <a class="contact-link" href="mailto:{{ client.email }}"><img src="/images/envelope.svg" height="20" width="20" alt="" viewBox="0 0 20 20" decoding="async" loading="lazy">{{ client.email }}</a>
             </li>
             <li class="contact-li">
                 <span class="contact-link"><img src="/images/location-dot.svg" height="20" width="20" alt="" decoding="async" loading="lazy">Singapore</span>
@@ -48,6 +48,6 @@
         </ul>
     </div>
     <div class="container copyright">
-        <p class="text">© 2025 Company Name. Development by <a href="https://hearthwood.netlify.app/" target="_blank" rel="noreferrer">Hearthwood Web Designs</a>. All Rights Reserved</p>
+        <p class="text">© {{ client.year }} {{ client.name }}. Development by <a href="https://hearthwood.netlify.app/" target="_blank" rel="noreferrer">Hearthwood Web Designs</a>. All Rights Reserved</p>
     </div>
 </footer>

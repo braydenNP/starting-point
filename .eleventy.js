@@ -1,5 +1,7 @@
 const { DateTime } = require("luxon");
 const eleventyPluginSharpImages = require("@codestitchofficial/eleventy-plugin-sharp-images");
+const sitemap = require("@quasibit/eleventy-plugin-sitemap");
+const client = require("./src/_data/client.js");
 
 module.exports = async function(eleventyConfig) {
 	// Configure Eleventy
@@ -18,6 +20,12 @@ module.exports = async function(eleventyConfig) {
         urlPath: "/images",
         outputDir: "public/images",
     });
+    eleventyConfig.addPlugin(sitemap, {
+        sitemap: {
+            hostname: client.domain,  // Replace with your actual site URL
+        },
+    });
+
     return {
         dir: {
             input: "src",

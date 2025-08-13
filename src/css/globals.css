@@ -133,11 +133,6 @@
         cursor: pointer;
     }
 
-    img {
-        display: block;
-        max-width: 100%;
-    }
-
     .title {
         font-family: var(--headerFontFamily);
         line-height: 1.2em;
